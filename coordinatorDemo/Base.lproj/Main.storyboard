@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="coordinatorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cg-1A-WkD">
+                                <rect key="frame" x="575" y="333" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Animate">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="animatePlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qT1-DW-iVt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.58431372550000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.733133433283363" y="32.799999999999997"/>
+        </scene>
+        <!--Sleep Mode View Controller-->
+        <scene sceneID="jVL-BG-hYN">
+            <objects>
+                <viewController storyboardIdentifier="SleepModeViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="TLd-5k-vlB" customClass="SleepModeViewController" customModule="coordinatorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wMa-1j-7nm">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duy-lU-Kk5">
+                                <rect key="frame" x="308.5" y="169.5" width="50" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="hideSleepMode:" destination="TLd-5k-vlB" eventType="touchUpInside" id="iKs-mu-afL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.70125214041095896" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="duy-lU-Kk5" firstAttribute="centerY" secondItem="wMa-1j-7nm" secondAttribute="centerY" id="hUV-wW-Gq3"/>
+                            <constraint firstItem="duy-lU-Kk5" firstAttribute="centerX" secondItem="wMa-1j-7nm" secondAttribute="centerX" id="kD2-Ov-elG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tci-UQ-M5f"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Zx-u2-rvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700.29985007496259" y="199.19999999999999"/>
+        </scene>
+        <!--Player View Controller-->
+        <scene sceneID="4S1-BD-RZc">
+            <objects>
+                <viewController storyboardIdentifier="PlayerViewController" id="6cr-Wf-oNV" customClass="PlayerViewController" customModule="coordinatorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wj7-fa-N80">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKf-XP-yAo">
+                                <rect key="frame" x="288" y="172.5" width="91" height="30"/>
+                                <state key="normal" title="Show overlay"/>
+                                <connections>
+                                    <action selector="showSleepMode:" destination="6cr-Wf-oNV" eventType="touchUpInside" id="wEz-Js-pAc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70087348090000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="KKf-XP-yAo" firstAttribute="centerX" secondItem="wj7-fa-N80" secondAttribute="centerX" id="20F-Ch-jJp"/>
+                            <constraint firstItem="KKf-XP-yAo" firstAttribute="centerY" secondItem="wj7-fa-N80" secondAttribute="centerY" id="3AH-dC-f9X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BEi-dA-uSL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Q1B-Cu-E4h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UBL-M5-hrY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34" y="866"/>
+        </scene>
+    </scenes>
+</document>
